@@ -6,69 +6,76 @@
     <title>Para kay Mama</title>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { overflow-x: hidden; background-color: #fdf5e6; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+        /* ✅ Gagamit tayo ng solid color na match sa red ng image mo para hindi halata ang dugtong */
+        background-color: #bd2a33; 
+        overflow-x: hidden;
+    }
 
-        .back-btn {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            padding: 8px 15px;
-            background-color: #f38ba0; /* Kasing kulay ng bow mo */
-            color: white;
-            text-decoration: none;
-            font-family: 'Indie Flower', cursive;
-            border-radius: 20px;
-            font-size: 1rem;
-        }
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        /* ✅ "repeat-y" para kung gaano man kahaba ang sulat mo, uulit-ulit yung design pababa */
+        background: url("shesh.jpg") repeat-y center top; 
+        background-size: 100% auto; /* Sakto sa lapad ng screen */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 180px; /* Space para sa bow sa taas */
+        padding-bottom: 100px;
+    }
 
-        .container {
-            width: 100%;
-            min-height: 100vh;
-            background: url("JAY.jpg") no-repeat center top; 
-            background-size: contain; /* Binago ko to 'contain' para hindi maputol ang image */
-            background-color: #bd2a33; /* Background color na match sa red mo */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 250px; /* ✅ ITO ANG MAGPAPABABA SA TEXT PARA PUMASOK SA PUTI */
-            padding-bottom: 100px;
-        }
+    .letter-content {
+        width: 75%; /* Saktong lapad para sa loob ng puti */
+        max-width: 650px;
+        text-align: center;
+        z-index: 10;
+        /* ✅ Nilagyan ko ng puting background na may konting aninag para siguradong readable */
+        background-color: rgba(255, 255, 255, 0.1); 
+        padding: 20px;
+        border-radius: 20px;
+    }
 
-        .letter-content {
-            width: 60%; /* ✅ Ginawa kong 60% para pumasok sa loob ng puting space */
-            max-width: 600px;
-            text-align: center;
-            z-index: 10;
-        }
+    p {
+        font-size: clamp(1.1rem, 2.5vw, 1.5rem); 
+        font-family: 'Indie Flower', cursive;
+        color: #3E2723;
+        line-height: 1.6;
+        white-space: pre-line;
+        font-weight: bold;
+    }
 
-        p {
-            /* ✅ LAKASAN NATIN ANG SIZE */
-            font-size: clamp(1.2rem, 3vw, 1.8rem); 
-            font-family: 'Indie Flower', cursive;
-            color: #3E2723;
-            line-height: 1.5;
-            mix-blend-mode: multiply; 
-            white-space: pre-line;
-            font-weight: bold;
-        }
+    /* ❤️ HEARTS */
+    .heart {
+        position: fixed;
+        top: 100%;
+        color: #ffb6c1;
+        font-size: 30px;
+        animation: floatUp linear forwards;
+        z-index: 5;
+    }
 
-        .heart {
-            position: fixed;
-            top: 100%;
-            color: #ffb6c1;
-            font-size: 30px;
-            animation: floatUp linear forwards;
-            pointer-events: none;
-            z-index: 5;
-        }
+    @keyframes floatUp {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    }
 
-        @keyframes floatUp {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
-        }
-    </style>
+    .back-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        padding: 8px 18px;
+        background-color: #f38ba0;
+        color: white;
+        text-decoration: none;
+        font-family: 'Indie Flower', cursive;
+        border-radius: 50px;
+        border: 2px solid white;
+    }
+</style>
 </head>
 <body>
 
