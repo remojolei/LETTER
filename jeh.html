@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para kay Mama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            overflow-x: hidden; 
+            background-color: #fdf5e6; 
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            /* ✅ TINANGGAL ANG FIXED PARA SUMABAY SA SCROLL */
+            background: url("JAY.jpg") no-repeat center top; 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .letter-content {
+            width: 85%;
+            max-width: 900px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        p {
+            font-size: clamp(1.8rem, 5vw, 2.5rem); 
+            font-family: 'Indie Flower', cursive;
+            color: #3E2723;
+            line-height: 1.6;
+            mix-blend-mode: multiply; 
+            white-space: pre-line;
+            font-weight: bold;
+			margin-bottom: 50px;
+        }
+
+        /* ❤️ ORIGINAL HEARTS (SMOOTH VERSION) */
+        .heart {
+            position: fixed; /* Mananatili silang lumulutang sa screen */
+            top: 100%;
+            color: #ffb6c1;
+            font-size: 35px;
+            animation: floatUp linear forwards;
+            pointer-events: none;
+            z-index: 5;
+            text-shadow: 0 0 10px pink;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+        }
+		
+		.back-btn {
+			position: fixed;
+			top: 20px;
+			left: 20px;
+			z-index: 1000;
+			padding: 10px 20px;
+			background-color: rgba(255, 182, 193, 0.7); /* Pinkish na medyo transparent */
+			color: #3E2723;
+			text-decoration: none;
+			font-family: 'Indie Flower', cursive;
+			font-weight: bold;
+			border-radius: 30px;
+			border: 2px solid #ffb6c1;
+			transition: 0.3s;
+		}
+
+		.back-btn:hover {
+			background-color: #ffb6c1;
+			transform: scale(1.1);
+		}
+    </style>
+</head>
+<body>
+<a href="index.html" class="back-btn">Back</a>
+    <div class="container">
+        <div class="letter-content">
+            <p>
+                <h1>To my One and only mother</h1><br>
+                Happy Mother's Day, Mama. 💖<br><br>
+
+                I know dili ko perfect nga anak. Daghan ta'g misunderstandings,<br>
+                ug mga wada mopa nakapasakit sa usag usa. Pero despite<br>
+                awaying, one thing I will never question is my love and<br>
+                sacrifices for us. Thank you, Ma, for giving everything you can<br>
+                even when life gets hard. Ikaw tong klase sa mama nga willing<br>
+                mo give up sa imong own happiness para lang mahimong atay<br>
+                among needs ug para lang okay mi. Usahay dili nako masabtan<br>
+                dayon imong kakapoy ug imong silent battles, pero as I grow<br>
+                older, mas masabtan na nako unsa ka lisod mahimong mama.<br><br>
+
+                Thank you for staying strong for us even when you were tired.<br>
+                Thank you for loving us even during the moments nga lisod mi<br>
+                higugmaon. Bisan masakitan ka sa among words usahay, wala<br>
+                nimo gihapon ka nibuhi. You still chose to care for us, support us,<br>
+                love us unconditionally. Mama, a huge part of who I am today is<br>
+                because of you. The strength I have, the way I care for people,<br>
+                and the way I keep fighting even when life gets hard - I learned<br>
+                all of that from you. You taught me things that no school or book<br>
+                ever could.<br><br>
+
+                Sometimes makahuna-huna ko sa tanan nimong sacrifices nga<br>
+                wala nako nakita. The sleepless nights, the worries, the tears<br>
+                you kept to yourself, and the dreams you probably set aside for<br>
+                our family. It hurts realizing that while we were growing up,<br>
+                ikaw diay quietly ga sacrifice sa tanan para namo. I may not say<br>
+                this often, but I see you now, Ma. I see your efforts. I see your<br>
+                pain. I see your love in every little thing you do for us every<br>
+                single day. Sorry for all the times nga wala tika nasabtan. Sorry<br>
+                sa moments nga mas nasuko kaysa naminaw. Sorry if I made<br>
+                you feel unappreciated. But please know that deep inside my<br>
+                heart, I will always be grateful to have you as my mother.<br><br>
+
+                No matter how many arguments we have, ikaw gihapon akong<br>
+                mama, akong komport, ug akong home. And no matter where life<br>
+                takes me, dala-dala nako tanan nimong sacrifices ug lessons. I<br>
+                promise one day, Ma, I'll make you proud. I'll do my best to give<br>
+                back all the love and sacrifices you gave us. You deserve a life<br>
+                full of peace, happiness, and love because you spent your whole<br>
+                life giving those things to us first. Thank you for everything,<br>
+                Mama. Thank you for never giving up on us.<br><br>
+
+                I love you more than words could ever explain
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "💖";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+            heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 7000);
+        }
+        setInterval(createHeart, 700); 
+    </script>
+</body>
+</html>
