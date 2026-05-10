@@ -4,37 +4,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>open this</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            background: url('jah.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .letter-btn {
-            position: absolute;
-            /* Binaba ko na nang sagad sa 80% para mapunta sa ilalim ng text */
-           positi9on: denter;
-            transform: translate(-50%, -50%);
-            font-size: 28px;
-            color: RED;
-            text-decoration: none;
-            font-weight: bold;
-            background-color: WHITE;
-            padding: 12px 30px;
-            border-radius: 20px;
-            border: 3px solid WHITE;
-            z-index: 9999;
-        }
+      .main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Eto yung styling para sa button mo */
+.open-btn {
+    position: absolute;
+    top: 50%; /* Gitna mula sa taas */
+    left: 50%; /* Gitna mula sa kaliwa */
+    transform: translate(-50%, -50%); /* Magic para saktong gitna talaga */
+    padding: 15px 40px;
+    background-color: #fdf5e6; /* Cream color base sa pic mo */
+    color: #bd2a33; /* Red text */
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive; /* O kung anong font gamit mo */
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.open-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: white;
+}
     </style>
 </head>
 <body>
-    <a href="jeh.html" class="letter-btn">OPEN THIS</a>
+  <div class="main-container">
+    <!-- Eto yung background image mo na nakita ko sa picture -->
+    <img src="main-bg.jpg" style="width: 100%; max-width: 600px; display: block;">
+
+    <!-- Eto yung button na gitnang-gitna -->
+    <a href="jeh.html" class="open-btn">OPEN THIS</a>
+</div>
 </body>
 </html>
