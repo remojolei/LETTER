@@ -2,95 +2,82 @@
 <html lang="tl">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para kay Mama</title>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            overflow-x: hidden; 
-            background-color: #fdf5e6; 
+        body { overflow-x: hidden; background-color: #fdf5e6; }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            padding: 8px 15px;
+            background-color: #f38ba0; /* Kasing kulay ng bow mo */
+            color: white;
+            text-decoration: none;
+            font-family: 'Indie Flower', cursive;
+            border-radius: 20px;
+            font-size: 1rem;
         }
 
         .container {
             width: 100%;
             min-height: 100vh;
-            /* ✅ TINANGGAL ANG FIXED PARA SUMABAY SA SCROLL */
-            background: url("JAY.jpg") no-repeat center top; 
-            background-size: cover;
+            background: url("shesh.jpg") no-repeat center top; 
+            background-size: contain; /* Binago ko to 'contain' para hindi maputol ang image */
+            background-color: #bd2a33; /* Background color na match sa red mo */
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 100px 0;
-            position: relative;
+            padding-top: 250px; /* ✅ ITO ANG MAGPAPABABA SA TEXT PARA PUMASOK SA PUTI */
+            padding-bottom: 100px;
         }
 
         .letter-content {
-            width: 85%;
-            max-width: 900px;
+            width: 60%; /* ✅ Ginawa kong 60% para pumasok sa loob ng puting space */
+            max-width: 600px;
             text-align: center;
             z-index: 10;
-            position: relative;
         }
 
         p {
-            font-size: clamp(1.8rem, 5vw, 2.5rem); 
+            /* ✅ LAKASAN NATIN ANG SIZE */
+            font-size: clamp(1.2rem, 3vw, 1.8rem); 
             font-family: 'Indie Flower', cursive;
             color: #3E2723;
-            line-height: 1.6;
+            line-height: 1.5;
             mix-blend-mode: multiply; 
             white-space: pre-line;
             font-weight: bold;
-			margin-bottom: 50px;
         }
 
-        /* ❤️ ORIGINAL HEARTS (SMOOTH VERSION) */
         .heart {
-            position: fixed; /* Mananatili silang lumulutang sa screen */
+            position: fixed;
             top: 100%;
             color: #ffb6c1;
-            font-size: 35px;
+            font-size: 30px;
             animation: floatUp linear forwards;
             pointer-events: none;
             z-index: 5;
-            text-shadow: 0 0 10px pink;
         }
 
         @keyframes floatUp {
             0% { transform: translateY(0) scale(1); opacity: 1; }
             100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
         }
-		
-		.back-btn {
-			position: fixed;
-			top: 20px;
-			left: 20px;
-			z-index: 1000;
-			padding: 10px 20px;
-			background-color: rgba(255, 182, 193, 0.7); /* Pinkish na medyo transparent */
-			color: #3E2723;
-			text-decoration: none;
-			font-family: 'Indie Flower', cursive;
-			font-weight: bold;
-			border-radius: 30px;
-			border: 2px solid #ffb6c1;
-			transition: 0.3s;
-		}
-
-		.back-btn:hover {
-			background-color: #ffb6c1;
-			transform: scale(1.1);
-		}
     </style>
 </head>
 <body>
-<a href="index.html" class="back-btn">Back</a>
+
+    <a href="index.html" class="back-btn">⬅ Back</a>
+
     <div class="container">
         <div class="letter-content">
             <p>
-                <h1>To my One and only mother</h1><br>
+            <h1>To my One and only mother</h1><br>
                 Happy Mother's Day, Mama. 💖<br><br>
 
                 I know dili ko perfect nga anak. Daghan ta'g misunderstandings,<br>
@@ -146,11 +133,11 @@
             heart.innerHTML = "💖";
             heart.style.left = Math.random() * 100 + "vw";
             heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
-            heart.style.fontSize = (Math.random() * 20 + 20) + "px";
             document.body.appendChild(heart);
             setTimeout(() => { heart.remove(); }, 7000);
         }
-        setInterval(createHeart, 700); 
+        setInterval(createHeart, 800); 
     </script>
 </body>
 </html>
+              
